@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-mcp-check"
+version = "0.1.0"
+description = "One-shot black-box security check for MCP servers. Malformed probes, method-not-found, unknown-tool, fail-closed grading, hash-chained trail."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "maintainers" }]
+keywords = ["mcp", "security", "audit", "testing", "agent", "jsonrpc"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = []
+
+[project.scripts]
+agent-mcp-check = "agent_mcp_check.cli:main"
+
+[tool.setuptools]
+packages = ["agent_mcp_check"]

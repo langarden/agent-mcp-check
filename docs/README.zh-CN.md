@@ -3,6 +3,13 @@
 > **你的 MCP Server 敢过一遍安全体检吗？**  
 > MCP 服务器一键黑盒安全体检——6 项探针、PASS/FAIL/WARN、哈希链留痕。
 
+```bash
+pip install agent-mcp-check          # 零依赖，Python 3.9+
+```
+
+<a href="https://gitcode.com/gcw_MKhSyoGN/agent-mcp-check"><img src="https://img.shields.io/badge/GitCode-gcw_MKhSyoGN%2Fagent-mcp-check-blue" alt="GitCode"></a>
+<a href="https://github.com/langarden/agent-mcp-check"><img src="https://img.shields.io/badge/GitHub-langarden%2Fagent-mcp-check-black" alt="GitHub"></a>
+
 `agent-mcp-check` 启动你的 MCP 服务器（stdio 传输），向它抛出一组畸形与恶意 JSON-RPC 消息。行为正确的服务器会全部以标准 JSON-RPC 错误拒绝；粗心的服务器会崩溃、挂起，或更糟——**执行一个本不该运行的工具**。它是 **Verifiable-agent 家族**成员。
 
 > ⚠️ **研究原型 — AI 辅助开发。** 这是一个开源研究/实验原型，由 AI 辅助产出。
@@ -30,10 +37,6 @@ MCP 是 AI Agent 时代的"新 Unix 管道"。大家都在快速发布 MCP 服�
 - 零依赖——纯 Python 3.9+ 标准库，可启动任意 stdio MCP 服务器
 
 ## 安装
-
-```bash
-pip install agent-mcp-check
-```
 
 ## 快速开始
 

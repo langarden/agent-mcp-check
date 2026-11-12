@@ -3,6 +3,16 @@
 > **你的 MCP Server 敢过一遍安全体检吗？**  
 > One-shot black-box security check for MCP servers — 6 probes, PASS/FAIL/WARN, hash-chained trail.
 
+```bash
+pip install agent-mcp-check            # zero deps, Python 3.9+
+```
+
+<a href="https://gitcode.com/gcw_MKhSyoGN/agent-mcp-check"><img src="https://img.shields.io/badge/GitCode-gcw_MKhSyoGN%2Fagent-mcp-check-blue" alt="GitCode"></a>
+<a href="https://github.com/langarden/agent-mcp-check"><img src="https://img.shields.io/badge/GitHub-langarden%2Fagent-mcp-check-black" alt="GitHub"></a>
+<img src="https://img.shields.io/badge/tests-7%20passed-green" alt="tests">
+<img src="https://img.shields.io/badge/license-MIT-yellow" alt="license">
+<img src="https://img.shields.io/badge/python-3.9%2B-blue" alt="python">
+
 `agent-mcp-check` launches your MCP server (stdio transport) and throws a battery of malformed and hostile JSON-RPC messages at it. A well-behaved server rejects them all with proper JSON-RPC errors. A sloppy server crashes, hangs, or — worst case — *executes a tool it should never have run*. Part of the **Verifiable-agent family**.
 
 > ⚠️ **Research prototype — AI-assisted development.** This is an open-source

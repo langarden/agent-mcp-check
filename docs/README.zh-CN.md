@@ -5,6 +5,19 @@
 
 `agent-mcp-check` 启动你的 MCP 服务器（stdio 传输），向它抛出一组畸形与恶意 JSON-RPC 消息。行为正确的服务器会全部以标准 JSON-RPC 错误拒绝；粗心的服务器会崩溃、挂起，或更糟——**执行一个本不该运行的工具**。它是 **Verifiable-agent 家族**成员。
 
+> ⚠️ **研究原型 — AI 辅助开发。** 这是一个开源研究/实验原型，由 AI 辅助产出。
+> 按 **AS IS** 提供，不含任何形式的担保，非商业或生产级产品。使用者自担风险。
+
+## 产品家族（Verifiable-agent 家族）
+
+| 仓库 | 角色 |
+|:--|:--|
+| **agent-mcp-check** | MCP **安全体检**（本仓库） |
+| [agent-call-audit](https://gitcode.com/gcw_MKhSyoGN/agent-call-audit) | 审计**引擎** |
+| [agent-memory-ledger](https://gitcode.com/gcw_MKhSyoGN/agent-memory-ledger) | 可验证**记忆层** |
+| [agent-audit-gateway](https://gitcode.com/gcw_MKhSyoGN/agent-audit-gateway) | HTTP **网关** |
+| [agent-route-grid](https://gitcode.com/gcw_MKhSyoGN/agent-route-grid) | 可审计多 Agent **路由** |
+
 ## 为什么需要它
 
 MCP 是 AI Agent 时代的"新 Unix 管道"。大家都在快速发布 MCP 服务器，而大多数从未被拿 `{"method": "tools/call", "params": null}` 推过。这个工具把"我的 MCP 服务器是否 fail-closed"变成一条命令。

@@ -5,6 +5,21 @@
 
 `agent-mcp-check` launches your MCP server (stdio transport) and throws a battery of malformed and hostile JSON-RPC messages at it. A well-behaved server rejects them all with proper JSON-RPC errors. A sloppy server crashes, hangs, or — worst case — *executes a tool it should never have run*. Part of the **Verifiable-agent family**.
 
+> ⚠️ **Research prototype — AI-assisted development.** This is an open-source
+> research/experimental prototype produced with AI assistance. It is provided
+> **AS IS**, without warranty of any kind, and is not a commercial or
+> production-grade product. Use at your own risk.
+
+## Verifiable-agent family
+
+| Repo | Role |
+|:--|:--|
+| **agent-mcp-check** | MCP **security check** (this repo) |
+| [agent-call-audit](https://gitcode.com/gcw_MKhSyoGN/agent-call-audit) | audit **engine** |
+| [agent-memory-ledger](https://gitcode.com/gcw_MKhSyoGN/agent-memory-ledger) | verifiable **memory** layer |
+| [agent-audit-gateway](https://gitcode.com/gcw_MKhSyoGN/agent-audit-gateway) | HTTP **gateway** |
+| [agent-route-grid](https://gitcode.com/gcw_MKhSyoGN/agent-route-grid) | audited multi-agent **routing** |
+
 ## Why
 
 MCP is the new Unix pipe for AI agents. Everyone is shipping MCP servers fast, and most of them were never pushed with `{"method": "tools/call", "params": null}`. This tool turns "is my MCP server fail-closed?" into one command.
